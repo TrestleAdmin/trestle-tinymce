@@ -4,10 +4,6 @@ module Trestle
       def defaults
         super.merge(rows: 20, class: "tinymce")
       end
-
-      def field
-        super + template.tinymce
-      end
     end
   end
 end

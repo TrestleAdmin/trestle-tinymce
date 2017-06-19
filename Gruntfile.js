@@ -11,7 +11,7 @@ module.exports = function (grunt) {
 
         expand: true,
         rename: function () {
-          return "app/assets/javascripts/tinymce/skins/trestle/skin.min.css";
+          return "app/assets/javascripts/tinymce/skins/trestle/_skin-lightgray.css";
         },
         src: ["src/trestle/less/Skin.less"],
         dest: "app/assets/javascripts/tinymce/skins/trestle"

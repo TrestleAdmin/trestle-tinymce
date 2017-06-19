@@ -1,0 +1,64 @@
+@import "trestle/support";
+@import "./skin-lightgray";
+
+.mce-tinymce {
+  box-sizing: border-box;
+  border-radius: $input-border-radius;
+}
+
+.mce-tinymce-inline {
+  box-sizing: content-box;
+}
+
+.mce-panel {
+  border: 0 solid $input-border;
+  background-color: #f5f5f5;
+}
+
+.mce-floatpanel,
+.mce-foot {
+  background-color: white;
+}
+
+.mce-arrow {
+  background-color: #f5f5f5;
+}
+
+.mce-toolbar-grp {
+  padding-top: 0;
+
+  position: relative;
+  z-index: 1;
+
+  box-shadow: 0 2px 1px rgba(black, 0.075);
+  border-radius: $input-border-radius $input-border-radius 0 0;
+
+  .mce-toolbar .mce-btn {
+    background-color: #f5f5f5;
+
+    &.mce-active,
+    &:hover {
+      background-color: #e3e3e3;
+    }
+  }
+}
+
+.mce-tinymce-inline,
+.mce-toolbar {
+  .mce-btn button {
+    padding: 2px 6px;
+  }
+}
+
+.mce-ico {
+  font-size: 14px;
+  line-height: 16px;
+  width: 14px;
+  height: 14px;
+}
+
+.mce-edit-area {
+  &, > iframe {
+    border-radius: 0 0 $input-border-radius $input-border-radius,
+  }
+}

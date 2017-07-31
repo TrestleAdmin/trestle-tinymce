@@ -1,35 +1,60 @@
-# Trestle::Tinymce
+# Trestle TinyMCE Integration (trestle-tinymce)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/trestle/tinymce`. To experiment with that code, run `bin/console` for an interactive prompt.
+> TinyMCE integration plugin for the Trestle admin framework
 
-TODO: Delete this and the text above, and describe your gem
 
-## Installation
+## Getting Started
 
-Add this line to your application's Gemfile:
+These instructions assume you have a working Trestle application. To integrate trestle-tinymce, first add it to your application's Gemfile:
 
 ```ruby
 gem 'trestle-tinymce'
 ```
 
-And then execute:
+Run `bundle install`, and then restart your Rails server.
 
-    $ bundle
+To add a TinyMCE editor to your form, use the `editor` (or `tinymce`) field type:
 
-Or install it yourself as:
+```ruby
+Trestle.resource(:articles) do
+  form do |article|
+    editor :content
+  end
+end
+```
 
-    $ gem install trestle-tinymce
+The default TinyMCE configuration can be edited by defining options within `config/initializers/trestle.rb`. The default configuration is shown below:
 
-## Usage
+```ruby
+Trestle.configure do |config|
+  config.tinymce.default.configure do |c|
+    c.skin = "trestle"
+    c.selector = "textarea.tinymce"
+    c.branding = false
+    c.elementpath = false
+    c.menubar = false
+    c.statusbar = false
+    c.plugins = [
+      :lists,
+      :link,
+      :image,
+      :charmap,
+      :table,
+      :code,
+      :hr,
+      :paste
+    ]
+    c.toolbar = [
+      "styleselect | bold italic underline strikethrough | subscript superscript hr | alignleft aligncenter alignright alignjustify",
+      "bullist numlist | indent outdent | undo redo | link unlink | image charmap table | code"
+    ]
+    c.link_context_toolbar = true
+    c.convert_urls = false
+  end
+end
+```
 
-TODO: Write usage instructions here
 
-## Development
+## License
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/trestle-tinymce.
+The gem is available as open source under the terms of the [LGPLv3 License](https://opensource.org/licenses/LGPL-3.0).

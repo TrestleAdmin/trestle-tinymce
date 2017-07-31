@@ -15,7 +15,8 @@ Trestle.configure do |config|
       :charmap,
       :table,
       :code,
-      :hr
+      :hr,
+      :paste
     ]
     c.toolbar = [
       "styleselect | bold italic underline strikethrough | subscript superscript hr | alignleft aligncenter alignright alignjustify",

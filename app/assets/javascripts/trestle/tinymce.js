@@ -1,6 +1,8 @@
 Trestle.TinyMCE = {};
 
-Trestle.ready(function() {
+Trestle.init(function(e, root) {
+  tinyMCE.remove();
+
   function init() {
     if (typeof(tinyMCE) !== 'undefined') {
       tinyMCE.init(Trestle.TinyMCE.default);

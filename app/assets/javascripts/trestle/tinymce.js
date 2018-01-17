@@ -1,15 +1,11 @@
 Trestle.TinyMCE = {};
 
 Trestle.init(function(e, root) {
-  tinyMCE.remove();
+  $(root).find('textarea.tinymce').each(function() {
+    var id = $(this).attr('id');
+    var editor = tinyMCE.get(id);
+    if (editor) { editor.remove(); }
+  });
 
-  function init() {
-    if (typeof(tinyMCE) !== 'undefined') {
-      tinyMCE.init(Trestle.TinyMCE.default);
-    } else {
-      setTimeout(init, 50);
-    }
-  }
-
-  init();
+  tinyMCE.init(Trestle.TinyMCE.default);
 });

@@ -27,7 +27,7 @@ Trestle.configure do |config|
   end
 
   config.hook(:javascripts) do
-    config = TinyMCE::Rails::Configuration.new(Trestle.config.tinymce.default.options)
+    config = TinyMCE::Rails::Configuration.new(Trestle.config.tinymce.default.as_json)
 
     tinymce_assets +
       javascript_include_tag("trestle/tinymce") +

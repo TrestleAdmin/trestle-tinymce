@@ -1,5 +1,7 @@
-@import "trestle/support";
 @import "./skin-lightgray";
+
+$input-border: #cccccc;
+$input-border-radius: .25rem;
 
 .mce-tinymce {
   box-sizing: border-box;

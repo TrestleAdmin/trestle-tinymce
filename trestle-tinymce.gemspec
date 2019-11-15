@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "trestle",       "~> 0.9.0"
-  spec.add_dependency "tinymce-rails", "~> 4.6"
+  spec.add_dependency "tinymce-rails", "~> 5.1"
 
   spec.add_development_dependency "bundler", "~> 1.15"
   spec.add_development_dependency "rake", "~> 10.0"

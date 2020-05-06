@@ -1,5 +1,3 @@
-require "trestle/tinymce/field"
-
 Trestle.configure do |config|
   config.tinymce.default.configure do |c|
     c.skin = "trestle"

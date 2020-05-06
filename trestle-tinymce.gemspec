@@ -1,7 +1,4 @@
-# coding: utf-8
-lib = File.expand_path("../lib", __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "trestle/tinymce/version"
+require_relative "lib/trestle/tinymce/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "trestle-tinymce"
@@ -20,7 +17,4 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "trestle",       "~> 0.9.0"
   spec.add_dependency "tinymce-rails", "~> 4.6"
-
-  spec.add_development_dependency "bundler", "~> 1.15"
-  spec.add_development_dependency "rake", "~> 10.0"
 end

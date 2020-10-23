@@ -50,7 +50,16 @@ Trestle.configure do |config|
     ]
     c.link_context_toolbar = true
     c.convert_urls = false
-    c.file_picker_types = 'image'
+  end
+end
+```
+
+Custom callbacks can be passed as strings and they will be automatically converted to JavaScript functions. The following example allows images to be uploaded and embedded as blob URLs.
+
+```ruby
+Trestle.configure do |config|
+  config.tinymce.default.configure do |c|
+    c.file_picker_types = "image"
     c.file_picker_callback = "function (cb, value, meta) {
       var input = document.createElement('input');
       input.setAttribute('type', 'file');
@@ -77,6 +86,8 @@ Trestle.configure do |config|
   end
 end
 ```
+
+For further information, please see [tinymce-rails](https://github.com/spohlenz/tinymce-rails) and the [TinyMCE documentation](https://www.tiny.cloud/docs/configure/).
 
 
 ## License

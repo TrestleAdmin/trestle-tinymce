@@ -1,0 +1,22 @@
+{
+  "name": "trestle-tinymce",
+  "version": "0.3.1",
+  "description": "TinyMCE plugin for the Trestle admin framework",
+  "main": "frontend/js/index.js",
+  "repository": "https://github.com/TrestleAdmin/trestle-tinymce.git",
+  "author": "Sam Pohlenz <sam@sampohlenz.com>",
+  "license": "LGPL-3.0",
+  "private": false,
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "watch": "webpack --mode development --watch"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.0",
+    "@babel/preset-env": "^7.18.0",
+    "babel-loader": "^8.2.5",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  }
+}

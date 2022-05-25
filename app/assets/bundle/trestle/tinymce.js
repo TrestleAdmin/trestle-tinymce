@@ -1,0 +1,1 @@
+!function(){"use strict";var t=class extends Trestle.ApplicationController{connect(){tinymce.init({target:this.element,...this.configuration})}disconnect(){const t=tinymce.get(this.element.id);t&&t.remove()}get configuration(){return Trestle.TinyMCE.default}};Trestle.TinyMCE={},Stimulus.register("tinymce",t)}();

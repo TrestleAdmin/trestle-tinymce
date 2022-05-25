@@ -1,7 +1,6 @@
 Trestle.configure do |config|
   config.tinymce.default.configure do |c|
     c.skin = "trestle"
-    c.selector = "textarea.tinymce"
     c.branding = false
     c.elementpath = false
     c.menubar = false

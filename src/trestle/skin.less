@@ -162,7 +162,7 @@
   }
 
   .tox-dialog__header {
-    background-color: hsl(var(--primary-hue), var(--primary-saturation), calc(var(--primary-lightness) - 15%));
+    background-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) * .8));
     background-image: linear-gradient(rgba(white, .05), rgba(black, .05));
     background-repeat: no-repeat;
 
@@ -236,7 +236,7 @@
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
     &:focus {
-      border-color: hsl(var(--primary-hue), var(--primary-saturation), calc(var(--primary-lightness) + 25%));
+      border-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) * 1.5));
       box-shadow: 0 0 0 .2rem rgba(var(--primary-rgb), .25);
     }
   }

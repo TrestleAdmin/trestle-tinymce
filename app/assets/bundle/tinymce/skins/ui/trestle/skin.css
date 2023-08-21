@@ -1914,26 +1914,26 @@ body.tox-dialog__disable-scroll {
 .tox-fullscreen {
   border: 0;
   height: 100%;
+  left: 0;
   margin: 0;
   overflow: hidden;
   -ms-scroll-chaining: none;
       overscroll-behavior: none;
   padding: 0;
+  position: fixed;
+  top: 0;
   touch-action: pinch-zoom;
   width: 100%;
 }
 .tox.tox-tinymce.tox-fullscreen .tox-statusbar__resize-handle {
   display: none;
 }
-.tox.tox-tinymce.tox-fullscreen,
-.tox-shadowhost.tox-fullscreen {
-  left: 0;
-  position: fixed;
-  top: 0;
-  z-index: 1200;
-}
 .tox.tox-tinymce.tox-fullscreen {
   background-color: transparent;
+  z-index: 1200;
+}
+.tox-shadowhost.tox-fullscreen {
+  z-index: 1200;
 }
 .tox-fullscreen .tox.tox-tinymce-aux,
 .tox-fullscreen ~ .tox.tox-tinymce-aux {
@@ -3074,7 +3074,7 @@ body.tox-dialog__disable-scroll {
   font-size: 1rem;
 }
 .tox .tox-dialog__header {
-  background-color: hsl(var(--primary-hue), var(--primary-saturation), calc(var(--primary-lightness) - 15%));
+  background-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) * 0.8));
   background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.05));
   background-repeat: no-repeat;
 }
@@ -3141,7 +3141,7 @@ body.tox-dialog__disable-scroll {
 .tox .tox-textfield:focus,
 .tox .tox-listboxfield .tox-listbox--select:focus,
 .tox .tox-textarea:focus {
-  border-color: hsl(var(--primary-hue), var(--primary-saturation), calc(var(--primary-lightness) + 25%));
+  border-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) * 1.5));
   box-shadow: 0 0 0 0.2rem rgba(var(--primary-rgb), 0.25);
 }
 .tox:not([dir=rtl]) .tox-checkbox__label {

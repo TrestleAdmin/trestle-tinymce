@@ -1,0 +1,297 @@
+@import '../../../theme/theme';
+
+// Root variables
+
+@background-color: #f5f5f5;
+
+@color-tint: #4d6bb2;
+@color-error: #e17572;
+@color-success: #7dc67d;
+
+@control-border-radius: .375rem;
+
+@tinymce-border-width: 1px;
+@tinymce-border-radius: @control-border-radius;
+@tinymce-border-color: #ccc;
+
+@pad-xs: 2px;
+
+// Font
+
+@line-height-base: 1.5;
+
+// Button
+
+@button-border-radius: .375rem;
+
+@button-background-color: @color-success;
+@button-text-color: white;
+
+@button-font-size: 1.35rem;
+@button-font-weight: 400;
+@button-line-height: 1.5;
+
+@button-padding-x: 1.25rem;
+@button-padding-y: .5rem;
+
+@button-focus-box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem rgba(145, 207, 145, .5);
+
+@button-hover-background-color: #6aa86a;
+@button-hover-border-color: #649e64;
+
+@button-active-background-color: #649e64;
+@button-active-border-color: #5e955e;
+@button-active-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+
+// Toolbar
+
+@toolbar-group-padding-x: 6px;
+
+@toolbar-button-hover-background-color: rgba(var(--primary-rgb), .15);
+@toolbar-button-enabled-background-color: rgba(var(--primary-rgb), .3);
+
+@collection-list-item-label-active-text-color: @color-black;
+@collection-toolbar-item-label-active-text-color: @color-black;
+@collection-grid-item-label-active-text-color: @color-black;
+
+// Checkbox
+
+@checkbox-selected-color: #4d6bb2;
+
+@checkbox-focus-box-shadow: 0 0 0 .2rem rgba(@color-tint, .25);
+
+// Secondary button
+
+@button-secondary-background-color: #bbb;
+@button-secondary-border-radius: .2rem;
+@button-secondary-text-color: white;
+
+@button-secondary-focus-box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, .15), 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 .2rem hsla(0, 0%, 77.3%, .5);
+
+@button-secondary-hover-background-color: #a8a8a8;
+@button-secondary-hover-border-color: #a2a2a2;
+
+@button-secondary-active-background-color: #a8a8a8;
+@button-secondary-active-border-color: #a2a2a2;
+@button-secondary-active-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+
+// Menu
+
+@menu-background-color: #fff;
+
+// Dialog
+
+@dialog-backdrop-background-color: fade(#000, 50);
+@dialog-backdrop-background-color-opaque: #000;
+
+@dialog-background-color: #fff;
+
+@dialog-border-radius: 0;
+@dialog-border-width: 0;
+@dialog-box-shadow: 0 .0625rem .09375em -.25rem rgba(0, 0, 0, .25), 0 .125rem .1875em -.25rem rgba(0, 0, 0, .25), 0 .25rem .375em -.25rem rgba(0, 0, 0, .25), 0 .5rem .75em -.25rem rgba(0, 0, 0, .25), 0 1rem 1.5em -.25rem rgba(0, 0, 0, .25);
+
+@dialog-header-background-color: darken(@color-tint, 15%);
+@dialog-header-padding: 1.05rem .5rem 1.05rem 1.5rem;
+
+@dialog-footer-background-color: #f9f9f9;
+@dialog-footer-padding: 1.5rem;
+@dialog-footer-separator-border: 1px solid rgba(0, 0, 0, .1);
+
+@dialog-body-font-size: 1rem;
+@dialog-body-padding: 1.5rem;
+
+@dialog-title-font-size: 1.3rem;
+@dialog-title-font-weight: 500;
+@dialog-title-text-color: white;
+
+@dialog-nav-focus-background-color: none;
+
+// Label
+
+@input-label-font-weight: bold;
+@input-label-line-height: 2;
+@input-label-text-color: #333;
+
+// Form
+
+@textfield-background-color: #fff;
+@textfield-border-radius: @control-border-radius;
+@textfield-font-size: 1rem;
+@textfield-line-height: 1.5;
+@textfield-pad-x: .75rem;
+@textfield-pad-y: .375rem;
+
+@textfield-focus-border-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) * 1.5));
+@textfield-focus-box-shadow: 0 0 0 .25rem rgba(var(--primary-rgb), .25);
+
+// Form layout
+
+@form-group-vertical-spacing: .75rem;
+@form-group-horizontal-spacing: 1rem;
+@form-grid-horizontal-gap: 20px;
+
+// Additional customization
+
+.tox {
+  // Buttons
+
+  .tox-button {
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+    @media @breakpoint-sm {
+      font-size: 1.25rem;
+      padding: .35rem .75rem;
+    }
+  }
+
+  .tox-button--secondary {
+    font-size: .875rem;
+    padding: .25rem .65rem;
+
+    @media @breakpoint-sm {
+      font-size: .75rem;
+      padding: .2rem .5rem;
+    }
+  }
+
+  // Checkbox
+
+  .tox-checkbox__icons {
+    height: 1.15em;
+    overflow: hidden;
+    padding: 0 !important;
+    width: 1.15em;
+
+    .tox-checkbox-icon__checked svg {
+      fill: var(--primary);
+    }
+  }
+
+  input.tox-checkbox__input:focus + .tox-checkbox__icons {
+    box-shadow: 0 0 0 .2rem rgba(var(--primary-rgb), .25);
+  }
+
+  // Dialog
+
+  .tox-dialog__header {
+    background-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) * .8));
+    background-image: var(--theme-texture, none), var(--theme-gradient, linear-gradient(rgba(white, .05), rgba(black, .05)));
+    background-repeat: repeat, no-repeat;
+
+    .tox-button {
+      margin: -10px .25rem -10px 0;
+      opacity: .75;
+      padding: .25rem;
+
+      path {
+        fill: white;
+      }
+
+      &:hover:not(:disabled) {
+        background-color: transparent;
+        border-color: transparent;
+        opacity: 1;
+      }
+    }
+  }
+
+  .tox-dialog__title {
+    text-shadow: rgba(0, 0, 0, .5) 0 1px 1px;
+  }
+
+  .tox-dialog__body-nav {
+    align-items: stretch;
+    background: #f3f3f3;
+    padding: 15px 0 15px 10px;
+
+    @media @breakpoint-sm {
+      padding: 10px 15px;
+    }
+  }
+
+  .tox-dialog__body-nav-item {
+    background-color: #eee;
+    border-bottom: 0;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-top: 4px;
+    padding: 10px 20px;
+
+    @media @breakpoint-sm {
+      font-size: .95rem;
+      margin-top: 0;
+      padding: 10px;
+
+      body:not(.tox-force-desktop) & {
+        &:not(:first-child) {
+          margin-right: 2px;
+        }
+      }
+    }
+  }
+
+  .tox-dialog__body-nav-item--active {
+    background-color: white;
+    border-bottom: 0;
+    color: #333;
+  }
+
+  .tox-dialog__footer-end,
+  .tox-dialog__footer-start {
+    align-items: flex-start;
+  }
+
+  // Collection
+
+  .tox-collection--grid .tox-collection__group {
+    max-height: 264px;
+  }
+
+  // Form
+
+  .tox-textfield {
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+    &:focus {
+      border-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) * 1.5));
+      box-shadow: 0 0 0 .2rem rgba(var(--primary-rgb), .25);
+    }
+  }
+
+  &:not([dir=rtl]) {
+    // Checkbox
+
+    .tox-checkbox__label {
+      margin-left: .6rem;
+    }
+
+    // Dialog
+
+    @media @breakpoint-sm {
+      .tox-dialog__body-nav-item {
+        body:not(.tox-force-desktop) & {
+          &:not(:first-child) {
+            margin-left: 2px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Testing
+
+// :root {
+//   // --primary: #338ab7;
+//   // --primary-rgb: 51, 138, 183;
+//   // --primary-h: 200;
+//   // --primary-s: 56%;
+//   // --primary-l: 46%;
+
+//   --primary: #e50914;
+//   --primary-rgb: 229, 9, 20;
+//   --primary-h: 357;
+//   --primary-s: 92%;
+//   --primary-l: 47%;
+// }

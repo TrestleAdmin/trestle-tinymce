@@ -40,10 +40,8 @@ Trestle.configure do |config|
       :image,
       :charmap,
       :table,
-      :code,
-      :hr,
-      :paste
-    ]
+      :code
+    ] # also includes [:hr, :paste] on TinyMCE 5
     c.toolbar = [
       "styleselect | bold italic underline strikethrough | subscript superscript hr | alignleft aligncenter alignright alignjustify",
       "bullist numlist | indent outdent | undo redo | link unlink | image charmap table | code"

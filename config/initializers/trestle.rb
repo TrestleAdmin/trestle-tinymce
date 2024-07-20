@@ -11,10 +11,9 @@ Trestle.configure do |config|
       :image,
       :charmap,
       :table,
-      :code,
-      :hr,
-      :paste
+      :code
     ]
+    c.plugins << :hr << :paste if Trestle::TinyMCE.tinymce_major_version == 5
     c.toolbar = [
       "styleselect | bold italic underline strikethrough | subscript superscript hr | alignleft aligncenter alignright alignjustify",
       "bullist numlist | indent outdent | undo redo | link unlink | image charmap table | code"

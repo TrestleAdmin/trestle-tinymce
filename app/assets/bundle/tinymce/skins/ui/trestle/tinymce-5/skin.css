@@ -1202,7 +1202,7 @@ button::-moz-focus-inner {
   display: flex;
   flex: 1;
   -ms-flex-preferred-size: auto;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: normal;
   line-height: 1.5;
@@ -1914,26 +1914,26 @@ body.tox-dialog__disable-scroll {
 .tox-fullscreen {
   border: 0;
   height: 100%;
-  left: 0;
   margin: 0;
   overflow: hidden;
   -ms-scroll-chaining: none;
       overscroll-behavior: none;
   padding: 0;
-  position: fixed;
-  top: 0;
   touch-action: pinch-zoom;
   width: 100%;
 }
 .tox.tox-tinymce.tox-fullscreen .tox-statusbar__resize-handle {
   display: none;
 }
-.tox.tox-tinymce.tox-fullscreen {
-  background-color: transparent;
+.tox.tox-tinymce.tox-fullscreen,
+.tox-shadowhost.tox-fullscreen {
+  left: 0;
+  position: fixed;
+  top: 0;
   z-index: 1200;
 }
-.tox-shadowhost.tox-fullscreen {
-  z-index: 1200;
+.tox.tox-tinymce.tox-fullscreen {
+  background-color: transparent;
 }
 .tox-fullscreen .tox.tox-tinymce-aux,
 .tox-fullscreen ~ .tox.tox-tinymce-aux {
@@ -3070,13 +3070,10 @@ body.tox-dialog__disable-scroll {
 .tox input.tox-checkbox__input:focus + .tox-checkbox__icons {
   box-shadow: 0 0 0 0.2rem rgba(var(--primary-rgb), 0.25);
 }
-.tox .tox-dialog__body {
-  font-size: 1rem;
-}
 .tox .tox-dialog__header {
   background-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) * 0.8));
-  background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.05));
-  background-repeat: no-repeat;
+  background-image: var(--theme-texture, none), var(--theme-gradient, linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.05)));
+  background-repeat: repeat, no-repeat;
 }
 .tox .tox-dialog__header .tox-button {
   margin: -10px 0.25rem -10px 0;
@@ -3131,6 +3128,9 @@ body.tox-dialog__disable-scroll {
 .tox .tox-dialog__footer-end,
 .tox .tox-dialog__footer-start {
   align-items: flex-start;
+}
+.tox .tox-collection--grid .tox-collection__group {
+  max-height: 264px;
 }
 .tox .tox-textfield,
 .tox .tox-toolbar-textfield,

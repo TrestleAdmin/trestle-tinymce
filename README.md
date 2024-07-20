@@ -1,5 +1,8 @@
 # Trestle TinyMCE Integration (trestle-tinymce)
 
+[![RubyGem](https://img.shields.io/gem/v/trestle-tinymce.svg?style=flat&colorB=4065a9)](https://rubygems.org/gems/trestle-tinymce)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/TrestleAdmin/trestle-tinymce/rspec.yml?style=flat)](https://github.com/TrestleAdmin/trestle-tinymce/actions)
+
 > TinyMCE integration plugin for the Trestle admin framework
 
 - Supports TinyMCE 5.x and 6.x (via [tinymce-rails](https://github.com/spohlenz/tinymce-rails/))

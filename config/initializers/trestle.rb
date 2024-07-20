@@ -1,6 +1,6 @@
 Trestle.configure do |config|
   config.tinymce.default.configure do |c|
-    c.skin = "trestle"
+    c.skin = "trestle/tinymce-#{Trestle::TinyMCE.tinymce_major_version}"
     c.branding = false
     c.elementpath = false
     c.menubar = false

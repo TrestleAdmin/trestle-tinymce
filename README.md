@@ -28,7 +28,7 @@ The default TinyMCE configuration can be edited by defining options within `conf
 ```ruby
 Trestle.configure do |config|
   config.tinymce.default.configure do |c|
-    c.skin = "trestle"
+    c.skin = "trestle/tinymce-6" # or "trestle/tinymce-5" depending on current version of tinymce-rails
     c.selector = "textarea.tinymce"
     c.branding = false
     c.elementpath = false

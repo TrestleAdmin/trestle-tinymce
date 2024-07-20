@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "trestle",       "~> 0.10.0.pre"
-  spec.add_dependency "tinymce-rails", "~> 5.1"
+  spec.add_dependency "tinymce-rails", ">= 5.1", "< 7"
 
   spec.add_development_dependency "rspec-rails"
 end

@@ -2,6 +2,11 @@
 
 > TinyMCE integration plugin for the Trestle admin framework
 
+- Supports TinyMCE 5.x and 6.x (via [tinymce-rails](https://github.com/spohlenz/tinymce-rails/))
+- Includes custom themes for supported TinyMCE versions
+
+<img width="960" alt="Trestle TinyMCE Integration Screenshot" src="https://github.com/user-attachments/assets/d55eb5f2-5317-434d-9f01-ea13761e3bbf">
+
 
 ## Getting Started
 

@@ -55,6 +55,22 @@ Trestle.configure do |config|
 end
 ```
 
+Alternate configurations can be defined in a similar fashion:
+
+```ruby
+Trestle.configure do |config|
+  config.tinymce.alternate.configure do |c|
+    ...
+  end
+end
+```
+
+and then used by passing the `data-tinymce-configuration-value` option to the editor:
+
+```ruby
+editor :content, data: { tinymce_configuration_value: "alternate" }
+```
+
 Custom callbacks can be passed as strings and they will be automatically converted to JavaScript functions. The following example allows images to be uploaded and embedded as blob URLs.
 
 ```ruby

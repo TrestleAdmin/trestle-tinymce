@@ -1,6 +1,13 @@
 /* global Trestle, tinymce */
 
 export default class extends Trestle.ApplicationController {
+  static values = {
+    configuration: {
+      type: String,
+      default: 'default'
+    }
+  }
+
   connect () {
     tinymce.init({
       target: this.element,
@@ -17,6 +24,6 @@ export default class extends Trestle.ApplicationController {
   }
 
   get configuration () {
-    return Trestle.TinyMCE.default
+    return Trestle.TinyMCE[this.configurationValue]
   }
 }

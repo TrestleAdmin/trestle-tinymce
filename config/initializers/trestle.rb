@@ -2,6 +2,7 @@ Trestle.configure do |config|
   config.tinymce.default.configure do |c|
     c.skin = "trestle/tinymce-#{Trestle::TinyMCE.tinymce_major_version}"
     c.branding = false
+    c.promotion = false
     c.elementpath = false
     c.menubar = false
     c.statusbar = false
@@ -22,11 +23,11 @@ Trestle.configure do |config|
   end
 
   config.hook(:javascripts) do
-    config = TinyMCE::Rails::Configuration.new(Trestle.config.tinymce.default.as_json.with_indifferent_access)
-
-    tinymce_assets +
-      javascript_include_tag("trestle/tinymce") +
-      javascript_tag("Trestle.TinyMCE.default = #{config.to_javascript};")
+    safe_join([
+      tinymce_assets,
+      javascript_include_tag("trestle/tinymce"),
+      javascript_tag(config.tinymce.to_javascript)
+    ], "\n")
   end
 
   config.form_field :tinymce, Trestle::TinyMCE::Field

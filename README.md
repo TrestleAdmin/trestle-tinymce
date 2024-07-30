@@ -50,8 +50,6 @@ Trestle.configure do |config|
       :code
     ] # also includes [:hr, :paste] on TinyMCE 5
     c.toolbar = "styleselect | bold italic underline strikethrough | subscript superscript hr | alignleft aligncenter alignright alignjustify | bullist numlist | indent outdent | undo redo | link unlink | image charmap table | code"
-    c.toolbar_mode = "floating"
-    c.toolbar_sticky = true
     c.link_context_toolbar = true
     c.convert_urls = false
   end

@@ -14,8 +14,12 @@ Trestle.configure do |config|
       :table,
       :code
     ]
-    c.plugins << :hr << :paste if Trestle::TinyMCE.tinymce_major_version == 5
-    c.toolbar = "styleselect | bold italic underline strikethrough | subscript superscript hr | alignleft aligncenter alignright alignjustify | bullist numlist | indent outdent | undo redo | link unlink | image charmap table | code"
+    if Trestle::TinyMCE.tinymce_major_version == 6
+      c.toolbar = "styles | bold italic underline strikethrough | subscript superscript hr | alignleft aligncenter alignright alignjustify | bullist numlist | indent outdent | undo redo | link unlink | image charmap table | code"
+    else
+      c.toolbar = "styleselect | bold italic underline strikethrough | subscript superscript hr | alignleft aligncenter alignright alignjustify | bullist numlist | indent outdent | undo redo | link unlink | image charmap table | code"
+      c.plugins << :hr << :paste
+    end
     c.link_context_toolbar = true
     c.convert_urls = false
   end

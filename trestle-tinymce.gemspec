@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "trestle",       "~> 0.10.0.pre"
+  spec.add_dependency "trestle",       "~> 0.10.0"
   spec.add_dependency "tinymce-rails", ">= 5.1", "< 7"
 
   spec.add_development_dependency "rspec-rails"
